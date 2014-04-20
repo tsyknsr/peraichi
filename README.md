@@ -22,6 +22,11 @@ $ cd vagrant-lamp-sample/vagrant
 $ vagrant up
 ```
 
+```
+$ vagrant ssh
+$ sh /share/app/Console/cake Migrations.migration run all --plugin Users
+```
+
 ### Web Application
 
 http://192.168.33.40/
