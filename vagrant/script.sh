@@ -84,16 +84,17 @@ mysql -u root -e "create database test_app default charset utf8"
 if [ -f /share/composer.json ]; then
   cd /share && curl -s http://getcomposer.org/installer | php
   /usr/bin/php /share/composer.phar install --dev
+  if [ ! -f /share/app/Config/core.php ]; then
   # cakephp
-  mkdir -p /share/lib && cd /share/lib && ln -s ../vendor/cakephp/cakephp/lib/Cake .
-  yes | php /share/lib/Cake/Console/cake.php bake project app
-  mkdir /share/Plugin
-  mv /share/lib/app/Plugin/* /share/Plugin
-  mv /share/lib/app/* /share/app
-  mkdir /share/app/Plugin
-  mv /share/Plugin/* /share/app/Plugin
-  cp -a /share/cake/database.php.default /share/app/Config/database.php
-  cp -a /share/cake/bootstrap.php.default /share/app/Config/bootstrap.php
-  #cp -a /share/cake/email.php.default /share/app/Config/email.php
+    mkdir -p /share/lib && cd /share/lib && ln -s ../vendor/cakephp/cakephp/lib/Cake .
+    yes | php /share/lib/Cake/Console/cake.php bake project app
+    mkdir /share/Plugin
+    mv /share/lib/app/Plugin/* /share/Plugin
+    mv /share/lib/app/* /share/app
+    mkdir /share/app/Plugin
+    mv /share/Plugin/* /share/app/Plugin
+    cp -a /share/cake/database.php.default /share/app/Config/database.php
+    cp -a /share/cake/bootstrap.php.default /share/app/Config/bootstrap.php
+    #cp -a /share/cake/email.php.default /share/app/Config/email.php
+  fi
 fi
-
