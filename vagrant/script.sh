@@ -79,6 +79,12 @@ mysql -u root -e "create database app default charset utf8"
 mysql -u root -e "create database test_app default charset utf8"
 
 #
+# ImageMagick
+#
+yum -y install ImageMagick ImageMagick-devel
+pecl install imagick
+
+#
 # Composer
 #
 if [ -f /share/composer.json ]; then
