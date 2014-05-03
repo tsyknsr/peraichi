@@ -22,6 +22,7 @@ class Template extends AppModel {
  */
 	public $validate = array(
 		'template_category_id' => array(
+            /*
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -30,6 +31,7 @@ class Template extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+            */
 		),
 		'name' => array(
 			'notEmpty' => array(

@@ -1,5 +1,5 @@
 CREATE TABLE `templates` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` varchar(36) NOT NULL,
   `template_category_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL DEFAULT '',
   `thumbnail_path` text NOT NULL,
