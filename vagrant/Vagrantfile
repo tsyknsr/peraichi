@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         mount_options: ['dmode=777,fmode=666']
 
   config.vm.provider :virtualbox do |vb|
-    vb.name = "lamp-sample"
+    vb.name = "peraichi"
     vb.gui = false
     #vb.customize ["modifyvm", :id, "--memory", 1024]
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
