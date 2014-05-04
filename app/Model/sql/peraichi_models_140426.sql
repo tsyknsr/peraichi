@@ -1,5 +1,5 @@
 CREATE TABLE `templates` (
-  `id` varchar(36) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `template_category_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL DEFAULT '',
   `thumbnail_path` text NOT NULL,
@@ -19,8 +19,8 @@ CREATE TABLE `template_categories` (
 CREATE TABLE `landing_pages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `template_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `subdomain` text NOT NULL,
+  `user_id` varchar(36) NOT NULL,
+  `subdomain` varchar(32) NOT NULL,
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
