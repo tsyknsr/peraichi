@@ -25,6 +25,7 @@ $ vagrant up
 ```
 $ vagrant ssh
 $ sh /share/app/Console/cake Migrations.migration run all --plugin Users
+$ mysql -uroot app < /share/app/Model/sql/peraichi_models_140426.sql // 基本的なDB設定
 ```
 
 ### Web Application
