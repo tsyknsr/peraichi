@@ -93,8 +93,8 @@ if [ -f /share/composer.json ]; then
     mv /share/lib/app/* /share/app
     mkdir /share/app/Plugin
     mv /share/Plugin/* /share/app/Plugin
-    cp -a /share/cake/database.php.default /share/app/Config/database.php
-    cp -a /share/cake/bootstrap.php.default /share/app/Config/bootstrap.php
-    #cp -a /share/cake/email.php.default /share/app/Config/email.php
   fi
+  cp -a /share/cake/database.php.default /share/app/Config/database.php
+  cp -a /share/cake/bootstrap.php.default /share/app/Config/bootstrap.php
+  #cp -a /share/cake/email.php.default /share/app/Config/email.php
 fi
